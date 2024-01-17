@@ -71,19 +71,19 @@ Future<String> getModel(String url) async {
     switch (field.type.name) {
       case 'String':
         buffer.writeln(
-            "      ${field.dartName} = getProp(xml, '${field.name}')?.text;");
+            "      ${field.dartName} = getProp(xml, '${field.name}')?.innerText;");
         break;
       case 'int':
         buffer.writeln(
-            "      ${field.dartName} = int.tryParse(getProp(xml, '${field.name}')?.text);");
+            "      ${field.dartName} = int.tryParse(getProp(xml, '${field.name}')?.innerText);");
         break;
       case 'bool':
         buffer.writeln(
-            "      ${field.dartName} = getProp(xml, '${field.name}')?.text?.toUpperCase() == 'TRUE';");
+            "      ${field.dartName} = getProp(xml, '${field.name}')?.innerText?.toUpperCase() == 'TRUE';");
         break;
       case 'DateTime':
         buffer.writeln(
-            "      ${field.dartName} = DateTime.parse(getProp(xml, '${field.name}')?.text);");
+            "      ${field.dartName} = DateTime.parse(getProp(xml, '${field.name}')?.innerText);");
         break;
       default:
         buffer.writeln(
