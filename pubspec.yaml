@@ -9,12 +9,12 @@ environment:
 
 dependencies:
   meta: ^1.3.0
-  http: ^1.2.0
+  http: ^0.13.1
   crypto: ^3.0.0
   convert: ^3.0.0
   xml: ^6.3.0
   buffer: ^1.1.0
-  intl: ^0.19.0
+  intl: ^0.18.1
   mime: ^1.0.0
   path: ^1.8.0
 
